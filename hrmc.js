@@ -1,3 +1,5 @@
+#!/usr/local/bin/node
+
 'use strict';
 
 const repl = require('repl');
@@ -9,7 +11,15 @@ process.stdout.write('Use client members or .exit to close repl.\r\n');
 
 let replServer = repl.start({
   prompt: '\n➤ ',
+  input: process.stdin,
+  output: process.stdout,
+  terminal: true,
   ignoreUndefined: true
 });
 
-replServer.context.client = client;
+replServer.context.c = replServer.context.client = client;
+
+replServer.on('exit', () => {
+  replServer.context.client.close();
+  process.exit();
+});
