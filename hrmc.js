@@ -1,16 +1,15 @@
 'use strict';
 
 const repl = require('repl');
-const client = require('./client');
+const client = require('./lib/client');
 const version = require('./package.json').version;
 
-process.stdout.write(`Hydra Router Message Client  ver ${version}\r\n`);
+process.stdout.write(`Hydra Router Message Client v.${version}\r\n`);
+process.stdout.write('Use client members or .exit to close repl.\r\n');
 
-// open the repl session
-var replServer = repl.start({
-  prompt: `\n➤ `,
+let replServer = repl.start({
+  prompt: '\n➤ ',
   ignoreUndefined: true
 });
 
 replServer.context.client = client;
-
