@@ -1,5 +1,3 @@
-#!/usr/local/bin/node
-
 'use strict';
 
 const repl = require('repl');
