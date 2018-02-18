@@ -33,8 +33,23 @@ Hydra Router Message Client
 ➤ client.sendMessage('{"to":"hydra-router:/","frm":"9vnwcm1spj@client:/","mid":"d29d78dd-eed5-4378-af18-9bf9c3076578","ts":"2018-02-16T13:32:45.828Z","ver":"UMF/1.4.6","typ":"ping","bdy":{}}');
 ```
 
+
 ```shell
 ➤ client.sendMessage('{"to":"hydra-router:[GET]/v1/router/list/services","frm":"28j9ce93lzr@client:/","mid":"d29d78dd-eed5-4378-af18-9bf9c3076578","ts":"2018-02-16T13:32:45.828Z","ver":"UMF/1.4.6","bdy":{}}');
+```
+
+### Get router that client is connected to
+
+```shell
+➤ client.sendMessage('{"to":"hydra-router:/","frm":"1ve4mcame6j@client:/","mid":"5cc4e3f5-ad72-41f3-a23f-212bdabc331f","ts":"2018-02-17T16:02:48.902Z","ver":"UMF/1.4.6","typ": "wsdir.loc","bdy":{"clientID": "asguyv6lq9"}}');
+```
+
+### Send message from one client to another through hydrarouter
+
+Uses the UMF `forward` (short form `for`) key for message forwarding.
+
+```shell
+➤ client.sendMessage(`{"to": "hydra-router:/", "frm": "1eksqsc6i8f@client:/", "fwd": "2v4n1w7py5@client:/", "mid": "5cc4e3f5-ad72-41f3-a23f-212bdabc331f", "ts": "2018-02-17T16:02:48.902Z", "ver": "UMF/1.4.6", "bdy": {"msg":"Hello from 1yancbc573b"}}`);
 ```
 
 ### Pretty print a JSON string
@@ -46,6 +61,4 @@ Hydra Router Message Client
 ```shell
 ➤ client.sendMessage('{"to":"hmr-service:/","frm":"d73qzhco1n@client:/","mid":"d29d78dd-eed5-4378-af18-9bf9c3076578","ts":"2018-02-16T13:32:45.828Z","ver":"UMF/1.4.6","bdy":{}}');
 ```
-
-
 
