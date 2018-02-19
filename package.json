@@ -1,12 +1,12 @@
 {
   "name": "hrmc",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Hydra Router Message Client",
   "author": {
     "name": "Carlos Justiniano",
     "email": "carlos.justiniano@gmail.com"
   },
-  "private": true,
+  "preferGlobal": true,
   "scripts": {
     "start": "node hrmc.js",
     "debug": "node --inspect --debug-brk hrmc.js",
@@ -15,6 +15,15 @@
   "engines": {
     "node": ">=6.9.2"
   },
+  "keywords": [
+    "hydra",
+    "hydra-router",
+    "hydra router",
+    "message",
+    "messaging",
+    "microservice",
+    "websocket"
+  ],
   "license": "MIT",
   "dependencies": {
     "bluebird": "3.5.0",
@@ -28,5 +37,8 @@
     "eslint-plugin-mocha": "4.11.0",
     "mocha": "3.4.2",
     "superagent": "3.5.2"
+  },
+  "bin": {
+    "hrmc": "hrmc.js"
   }
 }
