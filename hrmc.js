@@ -1,5 +1,3 @@
-'use strict';
-
 const repl = require('repl');
 const client = require('./lib/client');
 const version = require('./package.json').version;
