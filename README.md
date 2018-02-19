@@ -1,7 +1,21 @@
 # hrmc
 Hydra Router Message Client
 
+HRMC is a node based REPL which embeds a client app that you can interacively use to establish a WebSocket connection to a Hydra Router. Once connected it can be used to send messages to the Hydra Router, connected Hydra-based services and connected websocket clients.
+
+## Running from a docker container
+
+```shell
+$ docker run -it cjus/hrmc hrmc
+```
+
 ## Commands
+
+### Display help
+
+```shell
+➤ client.help();
+```
 
 ### Open connection to HydraRouter
 
