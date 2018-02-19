@@ -6,7 +6,7 @@ HRMC is a node based REPL which embeds a client app that you can interacively us
 ## Running from a docker container
 
 ```shell
-$ docker run -it cjus/hrmc hrmc
+$ docker run -it cjus/hrmc ./hrmc
 ```
 
 ## Commands
