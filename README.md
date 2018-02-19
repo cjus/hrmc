@@ -19,7 +19,11 @@ Hrmc is also available as a docker image.
 $ docker run -it cjus/hrmc ./hrmc
 ```
 
-## Commands
+## Full documentation
+
+The complete documentation can be found here: https://www.hydramicroservice.com/docs/tools/hydra-router/hydra-router-message-client.html
+
+## Quick command summary
 
 ### Display help
 
