@@ -74,7 +74,7 @@ The complete documentation can be found here: https://www.hydramicroservice.com/
 
 ### Send message from one client to another through hydrarouter
 
-Uses the UMF `forward` (short form `for`) key for message forwarding.
+Uses the UMF `forward` (short form `fwd`) key for message forwarding.
 
 ```shell
 ➤ client.sendMessage(`{"to": "hydra-router:/", "frm": "1eksqsc6i8f@client:/", "fwd": "2v4n1w7py5@client:/", "mid": "5cc4e3f5-ad72-41f3-a23f-212bdabc331f", "ts": "2018-02-17T16:02:48.902Z", "ver": "UMF/1.4.6", "bdy": {"msg":"Hello from 1yancbc573b"}}`);
